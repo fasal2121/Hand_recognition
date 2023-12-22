@@ -23,8 +23,7 @@ cv2.createTrackbar("Upper-V", "trackbars", 255, 255, nothing)
 
 while(1):
         
-    try:  #an error comes if it does not find anything in window as it cannot find contour of max area
-          #therefore this try error statement
+    try: 
         # Find finger (skin) color using trackbars
         low_h = cv2.getTrackbarPos("Lower-H", "trackbars")
         low_s = cv2.getTrackbarPos("Lower-S", "trackbars")
@@ -96,7 +95,7 @@ while(1):
         # print(defects)
 
         
-    # l = no. of defects
+    # l = number of defects
         l=0
         #code for finding no. of defects due to fingers
         for i in range(defects.shape[0]):
